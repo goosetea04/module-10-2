@@ -12,3 +12,9 @@ To show this, I ran one server and three clients. From the clients, we can see t
 ## Reflection 2.2
 
 Simply, if we want to change the port on the client code, we also need to change the port on the server code. This is because the server-client connection listens to each other, and they need to be connected to the same port.
+
+## Reflection 3.3
+
+![alt text](image-4.png)
+
+Here, I added information on what server The chat server and client are connected to.

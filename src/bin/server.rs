@@ -25,6 +25,8 @@ async fn handle_connection(
                         if let Some(text) = msg.as_text() {
                             println!("From client {addr:?} {text:?}");
                             bcast_tx.send(text.into())?;
+                            let message = format!("From server: {}: {}", addr, text);
+                            bcast_tx.send(message).map_err(|e| e.to_string())?;
                         }
                     }
                     Some(Err(err)) => return Err(err.into()),
